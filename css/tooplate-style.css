@@ -571,3 +571,22 @@ b, strong {
     vertical-align: top;
   }
 }
+
+/* Styles to center images in the projects carousel */
+.owl-carousel .item .project-info img {
+    display: block; /* Ensures the image is a block element */
+    margin-left: auto; /* Centers it horizontally */
+    margin-right: auto; /* Centers it horizontally */
+    max-width: 100%; /* Ensures the image does not overflow its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    /* If images have different heights, you can set a fixed height
+       and use object-fit to make them look good: */
+    /* height: 250px; /* Fixed height for all elements */
+    /* object-fit: contain; /* Adjusts the image to fit the space */
+    /* background-color: #f0f0f0; /* Background color if there is empty space */
+}
+
+/* Optional: Center text content if there is any */
+.owl-carousel .item .project-info {
+    text-align: center;
+}
