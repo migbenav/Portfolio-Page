@@ -572,24 +572,36 @@ b, strong {
   }
 }
 
-/* Custom styles for the projects carousel to handle different image sizes */
+/* Custom styles to force image centering in the Owl Carousel */
+.owl-carousel .item {
+    height: 400px; /* Set a fixed height for all carousel items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px; /* Add horizontal padding to prevent overlap with arrows */
+}
+
+.owl-carousel .item .project-info {
+    text-align: center;
+    height: 100%; /* Ensure the project-info container fills its parent */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .owl-carousel .item .project-info a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Ensures the link element has a defined height */
+    height: 100%; /* Ensure the link fills its parent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .owl-carousel .item .project-info img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* This is the key change: ensures the image fits inside the container without stretching */
+    object-fit: contain; /* Prevents images from stretching */
     display: block;
-    margin: 0 auto;
+    margin: 0;
 }
 
-/* Set a fixed height for each carousel item to ensure vertical alignment */
-.owl-carousel .item {
-  height: 350px; /* Adjust this value as needed to accommodate your tallest images */
-  padding: 20px 0; /* Adds padding to prevent overlap with arrows */
-}
