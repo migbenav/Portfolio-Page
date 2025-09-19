@@ -572,36 +572,52 @@ b, strong {
   }
 }
 
-/* Custom styles to force image centering in the Owl Carousel */
+/*
+ * Corrected styles for the Owl Carousel
+ * This block ensures all images are centered and properly sized.
+ */
 .owl-carousel .item {
-    height: 400px; /* Set a fixed height for all carousel items */
+    /* Sets a consistent height for all carousel items. Adjust as needed. */
+    height: 400px; 
+    
+    /* Use Flexbox to center content */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 40px; /* Add horizontal padding to prevent overlap with arrows */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    
+    /* Adds space to prevent image from overlapping navigation arrows */
+    padding: 0 40px; 
 }
 
 .owl-carousel .item .project-info {
-    text-align: center;
-    height: 100%; /* Ensure the project-info container fills its parent */
+    /* Ensures the inner container also fills the item's space */
+    height: 100%; 
     width: 100%;
+    
+    /* Flexbox for inner content alignment */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .owl-carousel .item .project-info a {
-    height: 100%; /* Ensure the link fills its parent */
+    /* Ensures the link fills its parent and helps with Flexbox centering */
+    height: 100%; 
+    width: 100%;
+    
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .owl-carousel .item .project-info img {
+    /* These rules are crucial for preserving aspect ratio */
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Prevents images from stretching */
-    display: block;
+    
+    /* Prevents the image from being stretched or distorted */
+    object-fit: contain; 
+    
+    /* Removes any default margins */
     margin: 0;
 }
-
