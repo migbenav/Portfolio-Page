@@ -572,30 +572,30 @@ b, strong {
   }
 }
 
-/* Custom styles for the projects carousel */
-.owl-carousel .owl-stage-outer {
-  padding: 20px 0; /* Adds top and bottom padding for vertical centering */
+/* Custom styles for the projects carousel to fix centering and sizing */
+.owl-carousel .item {
+    height: 400px; /* Adjust height as needed to fit your images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px; /* Add padding to prevent images from overlapping arrow icons */
+}
+
+.owl-carousel .item .project-info {
+    text-align: center;
+}
+
+.owl-carousel .item .project-info a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .owl-carousel .item .project-info img {
-  display: block;
-  margin: 0 auto; /* Shorthand to center horizontally */
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px; /* Adds a slight border radius for a modern look */
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits without being cropped */
+    margin: 0; /* Remove any default margins */
 }
-
-/* New CSS to control the project item's size and alignment */
-.owl-carousel .item {
-  height: 350px; /* Adjust this value as needed */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
-}
-
-.owl-carousel .owl-nav button.owl-next, 
-.owl-carousel .owl-nav button.owl-prev {
-  top: 45% !important; /* Adjusts the arrow position */
-}
-
