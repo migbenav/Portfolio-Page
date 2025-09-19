@@ -572,21 +572,30 @@ b, strong {
   }
 }
 
-/* Styles to center images in the projects carousel */
-.owl-carousel .item .project-info img {
-    display: block; /* Ensures the image is a block element */
-    margin-left: auto; /* Centers it horizontally */
-    margin-right: auto; /* Centers it horizontally */
-    max-width: 100%; /* Ensures the image does not overflow its container */
-    height: auto; /* Maintains the image's aspect ratio */
-    /* If images have different heights, you can set a fixed height
-       and use object-fit to make them look good: */
-    /* height: 250px; /* Fixed height for all elements */
-    /* object-fit: contain; /* Adjusts the image to fit the space */
-    /* background-color: #f0f0f0; /* Background color if there is empty space */
+/* Custom styles for the projects carousel */
+.owl-carousel .owl-stage-outer {
+  padding: 20px 0; /* Adds top and bottom padding for vertical centering */
 }
 
-/* Optional: Center text content if there is any */
-.owl-carousel .item .project-info {
-    text-align: center;
+.owl-carousel .item .project-info img {
+  display: block;
+  margin: 0 auto; /* Shorthand to center horizontally */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Adds a slight border radius for a modern look */
 }
+
+/* New CSS to control the project item's size and alignment */
+.owl-carousel .item {
+  height: 350px; /* Adjust this value as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+}
+
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev {
+  top: 45% !important; /* Adjusts the arrow position */
+}
+
